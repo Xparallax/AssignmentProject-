@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,3 +19,4 @@ public class BallMovement : MonoBehaviour {
         transform.Translate(horizontal, 0, vertical);
     }
 }
+
