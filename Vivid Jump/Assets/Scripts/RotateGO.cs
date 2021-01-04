@@ -1,10 +1,11 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RotateGO : MonoBehaviour
 {
-    float speed = 50.0f;
+    [SerializeField]
+    private float speed = 50.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,6 @@ public class RotateGO : MonoBehaviour
     void Update()
     {
         transform.Rotate(Vector3.up * speed * Time.deltaTime);
-         //if we press right arrow move the player to the right
+        
     }
 }
