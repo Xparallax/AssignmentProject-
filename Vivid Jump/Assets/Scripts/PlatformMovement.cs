@@ -13,12 +13,12 @@ public class PlatformMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(horizontal, 0, vertical);
+        //transform.Translate(horizontal, 0, vertical);
         // if (Input.GetKey(KeyCode.RightArrow))
-        {
+        //{
 
-        }
+        //}
         // if (Input.GetKey(KeyCode.LeftArrow))
-        }
+        //}
     }
 }
