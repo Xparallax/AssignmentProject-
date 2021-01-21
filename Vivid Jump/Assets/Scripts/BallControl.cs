@@ -15,12 +15,16 @@ public class BallControl : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision) {
+    private void OnCollisionEnter(Collision collision) 
+    {
 
-        Debug.Log("Ball touched something");
+        //Debug.Log("Ball touched something");
 
         rb.velocity = Vector3.zero;
         rb.AddForce(Vector3.up, ForceMode.Impulse);
+
+        GameManager.singleton.AddScore(1);
+        Debug.Log(GameManager.singleton.score);
     }
 
     //Update is called once per frame
