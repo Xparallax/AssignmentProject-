@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour 
@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
     public int best = 0;
     public Text Score;
     public int score = 0;
-    public int currentStage = 0;
+    public int currentStage = 1;
+    
     
     public static GameManager singleton;
     // Start is called before the first frame update
@@ -20,7 +21,9 @@ public class GameManager : MonoBehaviour
         if(singleton == null) 
         singleton = this;
         else if(singleton != this){}
-        //Destroy(gameObject);
+        
+
+        best = PlayerPrefs.GetInt("Highscore");
     
     }
     
@@ -28,12 +31,12 @@ public class GameManager : MonoBehaviour
         singleton = this;
     }
 
-    public void NextLevel()
+    public void NextLevel(int x)
     {
-        currentStage++;
-        //FindObjectOfType <BallControl>().ResetBall();
-        //FindObjectOfType <Movement>().LoadStage(currentStage);
-        Debug.Log("Next level called");
+        //if player hits specific trigger player will be transported to the next level 
+        SceneManager.LoadScene(x);
+        
+        //Debug.Log("Next level called");
     }
     public void RestartLevel()
     {
@@ -41,17 +44,17 @@ public class GameManager : MonoBehaviour
         Score.text="Score : 0" ;
         Best.text ="Best : "+best;
         score = 0;
-        //FindObjectOfType<BallControl>().ResetBall();
-        //FindObjectOfType<Movement>().LoadStage(currentStage);
+        
     }
     public void AddScore(int scoreToAdd)
     {
         score += scoreToAdd;
         Score.text="Score : " + score;
-        if(score > best){
+        if(score > best)
+        {
             best = score;
             Best.text= "Best : " + best;
-            
+            //PlayerPrefs.SetInt("Highscore", score);
         }
     }
 }

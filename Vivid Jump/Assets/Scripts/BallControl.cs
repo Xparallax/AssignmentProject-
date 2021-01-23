@@ -23,8 +23,8 @@ public class BallControl : MonoBehaviour
         rb.velocity = Vector3.zero;
         rb.AddForce(Vector3.up, ForceMode.Impulse);
 
-        GameManager.singleton.AddScore(1);
-        Debug.Log(GameManager.singleton.score);
+        //GameManager.singleton.AddScore(1);
+        //Debug.Log(GameManager.singleton.score);
     }
 
     //Update is called once per frame
