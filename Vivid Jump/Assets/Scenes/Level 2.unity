@@ -1231,11 +1231,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699f13e4e0851c2459b233ac74576406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Best: {fileID: 0}
+  Best: {fileID: 1681834527}
   best: 0
-  Score: {fileID: 0}
+  Score: {fileID: 1696072165}
   score: 0
-  currentStage: 0
+  currentStage: 2
 --- !u!4 &1420768525
 Transform:
   m_ObjectHideFlags: 0
@@ -1298,7 +1298,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1578570831}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd43f6275d84b964aa054802313eb63b, type: 3}
+  m_Script: {fileID: 11500000, guid: c397538f71449374cb1e8022361d5490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!65 &1578570835
@@ -1343,7 +1343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1681834527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1357,7 +1357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.735849, g: 0.6017005, b: 0.48940903, a: 1}
+  m_Color: {r: 0.3018868, g: 0.11249555, b: 0.40392157, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
