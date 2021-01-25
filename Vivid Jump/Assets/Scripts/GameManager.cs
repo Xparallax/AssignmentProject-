@@ -7,10 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour 
 {
-    public Text Best;
-    public int best;
     public Text Score;
-    public int currentBest;
     public int score = 0;
     public int currentStage = 2;
     
@@ -21,16 +18,12 @@ public class GameManager : MonoBehaviour
     {
         if(singleton == null) 
         singleton = this;
-        else if(singleton != this){}
-        
-        Best.text= "Best : " + best;
-        
-    
+        //else if(singleton != this);
     }
     
-    void Update() {
+    void Update()
+    {
         singleton = this;
-        Best.text= "Best : " + currentBest;
     }
 
     public void NextLevel(int x)
@@ -44,7 +37,6 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game Over");
         Score.text="Score : 0" ;
-        Best.text ="Best : "+best;
         score = 0;
         
     }
@@ -52,11 +44,5 @@ public class GameManager : MonoBehaviour
     {
         score += scoreToAdd;
         Score.text="Score : " + score;
-        if(score > currentBest)
-        {
-            best = score;
-            Best.text= "Best : " + best;
-            currentBest = best;
-        }
     }
 }
