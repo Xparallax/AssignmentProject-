@@ -7,6 +7,6 @@ public class PlatformEnd : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision) 
     {
-        GameManager.singleton.NextLevel(3);
+            GameManager.singleton.NextLevel(3);
     }
 }
